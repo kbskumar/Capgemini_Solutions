@@ -1,0 +1,48 @@
+<div class="container">
+    <form [formGroup]="adform" (ngSubmit)="submitAd()">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" placeholder="Enter Title" formControlName="title">
+        </div>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter Name" formControlName="name">
+        </div>
+        <div class="form-group">
+            <label for="category">Category</label>
+            <input type="text" class="form-control" id="category" placeholder="Category" formControlName="category">
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" placeholder="Description"
+                formControlName="description">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    <br>
+    <br>
+
+    <table class="table table-striped">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let item of collection">
+                <th scope="row" class="table-primary">{{item.id}}</th>
+                <td class="table-primary">{{item.title}}</td>
+                <td class="table-primary">{{item.name}}</td>
+                <td class="table-primary">{{item.category}}</td>
+                <td class="table-primary">{{item.description}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>

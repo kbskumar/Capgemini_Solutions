@@ -1,0 +1,36 @@
+<div class="container">
+
+    <form>
+        <div class="form-group">
+          <input type="text" class="form-control" id="search" placeholder="Search here" [(ngModel)] = "nameSearch">
+        </div>
+        <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    </form>
+
+
+<table class="table table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Name</th>
+            <th scope="col">Category</th>
+            <th scope="col">Description</th>
+            <th class="text-center" scope="col">Delete</th>
+            <th class="text-center" scope="col">Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let item of collections | filter: nameSearch">
+            <th scope="row" class="table-warning">{{item.id}}</th>
+            <td class="table-warning">{{item.title}}</td>
+            <td class="table-warning">{{item.name}}</td>
+            <td class="table-warning">{{item.category}}</td>
+            <td class="table-warning">{{item.description}}</td>
+            <td class="text-center"><i (click)="deleteAdd(item.id)" class="fa fa-trash" style="font-size:25px;color:red;"></i></td>
+            <td class="text-center"><a routerLink="/update/{{item.id}}"><i class="fa fa-edit" style="font-size:25px;color:green;"></i></a></td>
+
+        </tr>
+    </tbody>
+</table>
+</div>
