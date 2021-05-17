@@ -1,0 +1,87 @@
+.form-signin {
+	width: 100%;
+	max-width: 330px;
+	padding: 15px;
+	margin: auto;
+}
+
+.form-add {
+	width: 100%;
+	max-width: 600px;
+	padding: 15px;
+	margin: auto;
+}
+.add-label {
+	width: 100%;
+}
+
+.form-signin .checkbox {
+	font-weight: 400;
+}
+.form-signin .form-control {
+	position: relative;
+	box-sizing: border-box;
+	height: auto;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-direction: column;
+}
+#cols {
+	display: flex;
+	flex-direction: column;
+}
+
+.myCard {
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+}
+.myCard:hover {
+	border-color: #b1b1b1;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.alert {
+	color: white;
+	border-radius: 10px;
+	position: absolute;
+	top: 50px;
+	right: 10px;
+	padding: 20px;
+	display: flex;
+	align-items: center;
+	z-index: 1111;
+}
+.alert p {
+	margin: 0;
+}
+.alert-error {
+	background: lightcoral;
+}
+.alert-success {
+	background: lightgreen;
+}
+.close {
+	color: white;
+	cursor: pointer;
+	margin-right: 10px;
+}

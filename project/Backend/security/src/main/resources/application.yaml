@@ -1,0 +1,44 @@
+server:
+ port: 8100	
+zuul:
+ routes:
+  Coupon:
+   url: http://localhost:9000
+  User:
+   url: http://localhost:9002
+  Saved:
+   url: http://localhost:9006
+  Discovery:
+   url: http://localhost:8761
+  ribbon:
+   eureka:
+    enabled: true
+    ReadTimeout: 120000
+    ConnectTimeout: 3000
+   hystrix:
+    command:
+     default:
+      execution:
+       isolation:
+        strategy: THREAD
+        thread:
+         timeoutInMilliseconds: 60000
+management:
+ endpoints:
+  web:
+   exposure:
+    include: '*'
+ endpoint:
+  health:
+   show-details: ALWAYS
+spring:
+ data:
+  mongodb:
+   uri: mongodb+srv://kbs:1234@cluster0.zuxqt.mongodb.net/test
+example:
+ app:
+  jwtSecret: SecretKey
+  jwtExpirationMs: 86400000
+
+
+
